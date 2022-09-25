@@ -214,9 +214,39 @@ enum MarioAnimID
     /* 0xCE */ MARIO_ANIM_RETURN_FROM_STAR_DANCE,
     /* 0xCF */ MARIO_ANIM_FORWARD_SPINNING_FLIP,
     /* 0xD0 */ MARIO_ANIM_TRIPLE_JUMP_FLY,
-    /* 0xD1 */ MARIO_ANIM_SWIM_WAIT,
-    /* 0xD2 */ MARIO_ANIM_SWIM_STOP,
-    /* 0xD3 */ MARIO_ANIM_SWIM_MOVE
+	/* 0xD1 */ MARIO_ANIM_SWIM_WAIT, 						// floating.c
+	/* 0xD2 */ MARIO_ANIM_SWIM_STOP, 						// swimstop.c
+	/* 0xD3 */ MARIO_ANIM_SWIM_MOVE, 						// floatmove.c
+    /* 0xD4 */ MARIO_ANIM_CLIMBING,		 					// climbing.c
+    /* 0xD5 */ MARIO_ANIM_CLIMB_DOWN,		 				// climbdown.c
+    /* 0xD6 */ MARIO_ANIM_SHALLOW_WATER_IDLE,				// waterwait.c
+    /* 0xD7 */ MARIO_ANIM_WATER_GROUND_TRANSITION,		 	// waterstand.c
+    /* 0xD8 */ MARIO_ANIM_OSHIN_WALK,		 				// oshinwalk.c
+	/* 0xD9 */ MARIO_ANIM_GIDDY_WAKE_UP,		 			// giddywakeup.c
+	/* 0xDA */ MARIO_ANIM_FLY_LAND_GEAR,		 			// mantgear.c
+	/* 0xDB */ MARIO_ANIM_FLY_LAND_END,		 				// mantkanding.c
+	/* 0xDC */ MARIO_ANIM_TAKING,		 					// taking.c
+	/* 0xDD */ MARIO_ANIM_NOT_TAKING,		 				// notaking.c
+	/* 0xDE */ MARIO_ANIM_BRIDGE_IDLE,		 				// logwait/c
+	/* 0xDF */ MARIO_ANIM_BRIDGE_WALK_LEFT,		 			// logwalkL.c
+	/* 0xE0 */ MARIO_ANIM_BRIDGE_WALK_RIGHT,		 		// logwalkR.c
+	/* 0xE1 */ MARIO_ANIM_FLY_LANDING,		 				// mainlandend.c
+	/* 0xE2 */ MARIO_ANIM_SQUAT_KICK_START,		 			// squatkickstart.c
+	/* 0xE3 */ MARIO_ANIM_SQUAT_KICK, 						// squatkicking.c
+	/* 0xE4 */ MARIO_ANIM_SQUAT_KICK_END,		 			// squatkickend.c
+	/* 0xE5 */ MARIO_ANIM_WATER_ATTACK,		 				// floattake.c
+	/* 0xE6 */ MARIO_ANIM_WATER_THROW, 						// floatthrow.c
+	/* 0xE7 */ MARIO_ANIM_SLIP_BRAKE,		 				// slipbrake.c
+	/* 0xE8 */ MARIO_ANIM_SLIP_ACCEL,		 				// slipaccele.c
+	/* 0xE9 */ MARIO_ANIM_WIN_DEMO_A_OLD,		 			// windemoAold.c
+	/* 0xEA */ MARIO_ANIM_WATER_IDLE_HOLD//,		 			// floathold.c
+//	/* 0xEB */ MARIO_ANIM_CHASE_JOG,						// chasejog.c
+//	/* 0xEC */ MARIO_ANIM_CHASE_WALK,						// chasewalk.c
+//	/* 0xED */ MARIO_ANIM_CHASING,							// chasing.c
+//	/* 0xEE */ MARIO_ANIM_CLIMB_LEFT,						// climbleft.c
+//	/* 0xEF */ MARIO_ANIM_CLIMB_RIGHT,						// climbright.c
+//	/* 0xF0 */ MARIO_ANIM_HAT_WAIT_1,						// hatwait1.c
+//	/* 0xF1 */ MARIO_ANIM_HAT_WAIT_2						// hatwait2.c
 };
 
 #endif /* _MARIO_ANIMATION_IDS_H */
