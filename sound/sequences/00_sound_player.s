@@ -473,7 +473,8 @@ chan_setlayer 0, .layer_2CC
 chan_end
 
 .layer_2CC:
-layer_note1 39, 0x24, 120
+layer_note1 41, 0x3, 120
+layer_note1 48, 0x18, 120
 layer_end
 
 .sound_action_landing_stone:
@@ -548,7 +549,7 @@ chan_setlayer 0, .layer_334
 chan_end
 
 .layer_334:
-layer_note1 39, 0x18, 100
+layer_note1 39, 0x18, 85
 layer_end
 
 .sound_action_step_water:
@@ -568,7 +569,7 @@ chan_setlayer 0, .layer_34C
 chan_end
 
 .layer_34C:
-layer_note1 39, 0x18, 77
+layer_note1 40, 0x18, 77
 layer_end
 
 .sound_action_step_spooky:
@@ -4489,6 +4490,7 @@ layer_somethingon
 .layer_1B56:
 layer_note1 41, 0x12c, 95
 layer_jump .layer_1B56
+layer_end
 
 .sound_env_elevator1:
 chan_setbank 5
@@ -5060,18 +5062,13 @@ layer_note1 27, 0x21, 90
 layer_end
 
 .sound_obj_mri_shoot:
-chan_setbank 7
-chan_setinstr 3
-chan_setlayer 0, .layer_1F72
-chan_setval 1
-chan_call .delay
 chan_setbank 6
 chan_setinstr 0
+chan_setlayer 0, .layer_1F72
 chan_end
 
 .layer_1F72:
-layer_note1 43, 0xf, 90
-layer_portamento 0x82, 27, 255
+layer_portamento 0x82, 47, 255
 layer_note1 36, 0xb, 90
 layer_end
 
@@ -7850,7 +7847,24 @@ layer_delay 0xc6
 layer_jump .layer_3221
 layer_end
 
+
 .sound_air_castle_outdoors_ambient:
+chan_setbank 5
+chan_setinstr 16
+chan_setval 30
+chan_call .set_reverb
+chan_setlayer 0, .layer_1B54
+chan_end
+
+.layer_1B54:
+layer_somethingon
+layer_delay 0x6
+.layer_1B55:
+layer_note1 41, 0x12c, 95
+layer_jump .layer_1B55
+layer_end
+
+.sound_env_castle_birds:
 chan_setbank 5
 chan_setval 15
 chan_call .set_reverb
