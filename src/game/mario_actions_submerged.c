@@ -28,6 +28,8 @@ static s16 D_80339FD0;
 static s16 D_80339FD2;
 static f32 D_80339FD4;
 
+static void play_swimming_noise(struct MarioState *m);
+
 static void set_swimming_at_surface_particles(struct MarioState *m, u32 particleFlag) {
     s16 atSurface = m->pos[1] >= m->waterLevel - 130;
 
@@ -344,7 +346,8 @@ static void common_idle_step(struct MarioState *m, s32 animation, s32 arg) {
     } else if (animation == MARIO_ANIM_SWIM_STOP) {
         set_mario_animation(m, animation);
     } else if (arg == 1 && (targetSpeed > 0.0f || m->angleVel[1] != 0.0f)) {
-        set_mario_animation(m, MARIO_ANIM_SWIM_MOVE);
+		play_swimming_noise(m);
+		set_mario_anim_with_accel(m, MARIO_ANIM_SWIM_MOVE, 0x20000);
     } else {
         set_mario_anim_with_accel(m, animation, arg);
     }
