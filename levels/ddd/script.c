@@ -87,6 +87,7 @@ const LevelScript level_ddd_entry[] = {
         JUMP_LINK(script_func_local_2),
         INSTANT_WARP(/*index*/ 3, /*destArea*/ 2, /*displace*/ -8192, 0, 0),
         TERRAIN(/*terrainData*/ water_land_area_1_collision),
+        SHOW_DIALOG(/*index*/ 0x00, DIALOG_060),
         MACRO_OBJECTS(/*objList*/ water_land_area_1_macro),
         SET_BACKGROUND_MUSIC(/*settingsPreset*/ 0x0000, /*seq*/ SEQ_LEVEL_WATER),
         TERRAIN_TYPE(/*terrainType*/ TERRAIN_WATER),
